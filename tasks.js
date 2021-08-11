@@ -511,7 +511,7 @@ console.log(fibonacci(6)); // [0, 1, 1, 2, 3, 5, 8]
 *7.  Write a function that returns an array containing the names of the remaining tasks a student has to complete before moving on to the next module.
 
 The function signature has been provided for you. Your function will receive two parameters: totalTasks and completedTasks. The return value from the remainingTasks function should be an array containing the items in the totalTasks array, that is not in the completedTasks array.
-  */
+
 const totalTasks = [
   'Array',
   'String',
@@ -524,13 +524,10 @@ const completedTasks = ['Array', 'String', 'Recursion']
 function remainingTasks(totalTasks, completedTasks) {
   const remainingTask = []
   //Check for the difference btw the two arrays
-
-  // Push array into an empty array
-
-  // Return new array of remaining task.
-
-  // remainingTask.push()
-  return remainingTask
+  const difference = totalTasks.filter(task => !completedTasks.includes(task))
+  remainingTask.push(difference)
+  return remainingTask.flat()
 }
 const task = remainingTasks(totalTasks, completedTasks)
 console.log(task)
+  */
